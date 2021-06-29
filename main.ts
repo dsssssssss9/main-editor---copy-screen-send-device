@@ -1,3 +1,5 @@
+// Depending on what you are sending You may have to alter the pause between icons - if too low the receiving device may not have time to display the new icon correctly
+// 
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index < 8; index++) {
         basic.showIcon(IconNames.Heart)
@@ -7,6 +9,8 @@ input.onButtonPressed(Button.A, function () {
     }
     basic.showIcon(IconNames.Happy)
 })
+// Set Radio Group to be the same as the receiving Device(s)
+// 
 radio.setGroup(42)
 basic.showString("Press A to send")
 basic.forever(function () {
